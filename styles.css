@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.navbar{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 90px;
+    gap:15rem;
+}
+.left{
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+.text{
+    display: flex;
+}
+.right{
+    display: flex;
+    margin-right: 5rem;
+    align-items: center;
+    gap: 1rem;
+}
+.image{
+    height: 40px;
+    width: auto;
+}
+.coun{
+    filter: grayscale(0);
+    transition: all 0.2s ease 10ms;
+    border-radius: 7px;
+    height: 20px;
+    width: auto;
+    filter: brightness(1.1);
+}
+.coun:hover{
+    filter: grayscale(1);
+}
+.menus{
+    color: rgb(95, 108, 125);
+    font-size: medium;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+.option{
+    display: block;
+    flex-direction: column;
+}
+.dropdown:hover .menus{
+    color: rgb(43, 132, 234);
+}
+.drocon{
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(216, 237, 255);
+}
+
+.dropdown:hover .drocon {
+    display: block;
+}
+
+
+.login{
+    color: rgb(19, 100, 241);
+    font-size: 0.875rem;
+    padding: 0.65rem 1rem;
+    font-weight: 500;
+    transition: 20ms cubic-bezier(0.23, 1, 0.320, 1);
+}
+.login:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.sign{
+    background-color: rgb(19, 100, 241);
+    font-size: 0.875rem;
+    color: white;
+    padding: 0.65rem 1rem;
+    font-weight: 600;
+    transition: 110ms cubic-bezier(0.23, 1, 0.320, 1);
+}
+.sign:hover{
+    background-color: rgb(8, 53, 136);
+}
+.leftop{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+}
+.option{
+    width: 95%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+.option:hover{
+    box-shadow: 0.5px 0.5px 0px rgb(148, 148, 148);
+    background-color: rgb(226, 240, 253);
+}
+.option:hover .head a{
+    color: rgb(25, 108, 203);
+}
+.head a{
+    display: flex;
+    color: rgb(10, 55, 106);
+    font-weight: 500;
+    font-size: medium;
+}
+.para{
+    color: rgb(161, 161, 161);
+}
