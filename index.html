@@ -1,185 +1,256 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-a{
-    text-decoration: none;
-}
-button{
-    border: none;
-    background-color: white;
-    cursor: pointer;
-}
-.navbar{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    width: 100%;
-    height: 60px;
-    border-radius: 15px;
-    background-color: rgb(242, 244, 248);
-}
-.left{
-    display: flex;
-    align-items: center;
-    margin-left: 7rem;
-}
-.text{
-    display: flex;
-}
-.right{
-    display: flex;
-    margin-right: 7rem;
-    align-items: center;
-}
-.image{
-    height: 35px;
-    width: auto;
-}
-.coun{
-    filter: grayscale(0);
-    transition: all 0.2s ease 10ms;
-    border-radius: 7px;
-    height: 20px;
-    width: auto;
-    filter: brightness(1.1);
-}
-.coun:hover{
-    filter: grayscale(1);
-}
-.menus{
-    color: rgb(95, 108, 125);
-    font-size: medium;
-    font-weight: 500;
-    cursor: pointer;
-}
-.dropdown{
-    overflow: hidden;
-    transition: all 200ms cubic-bezier(0.23, 1, 0.320, 1) 50ms;
-    padding: 1rem;
-    justify-items: center;
-    justify-content: center;
-}
-.option{
-    display: flex;
-    gap:1rem;
-    width: 100%;
-    padding: 1rem;
-    align-items: center;
-    text-align: left;
-    border-radius: 5px;
-}
-.optext{
-    flex-direction: column;
-    align-items: center;
-}
-.icon{
-    border-radius: 50%;
-    background-color: rgb(43, 132, 234);
-    height: 32px;
-    aspect-ratio: 1;
-    border-style: solid;
-    border-color: rgb(236, 246, 255);
-}
-.option:hover{
-    box-shadow: 0px 0px 1.3px rgb(175, 175, 175);
-    background-color: rgb(236, 246, 255);
-}
-.option:hover .head a{
-    color: rgb(25, 108, 203);
-}
-.option:hover .icon{
-    background-image: linear-gradient(to top right, rgb(185, 218, 255), rgb(43, 132, 234));
-}
-.dropdown:hover .menus{
-    color: rgb(43, 132, 234);
-}
-.dropbox{
-    width: 60%;
-    margin-top: 1rem;
-    display: none;
-    border-radius: 1px;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    padding: 2rem;
-    box-shadow: 0px 0px 2px rgb(148, 148, 148);
-}
-.dropdown:hover .dropbox {
-    display: block;
-}
-.drocon{
-    display: flex;
-}
-.login{
-    color: rgb(19, 100, 241);
-    font-size: 0.875rem;
-    padding: 0.65rem 1rem;
-    font-weight: 500;
-    transition: 20ms cubic-bezier(0.23, 1, 0.320, 1);
-}
-.login:hover{
-    background-color: rgb(240, 240, 240);
-}
-
-.sign{
-    background-color: rgb(19, 100, 241);
-    font-size: 0.875rem;
-    color: white;
-    padding: 0.65rem 1rem;
-    font-weight: 600;
-    transition: 110ms cubic-bezier(0.23, 1, 0.320, 1);
-    border-style: solid;
-    border-color: rgb(231, 231, 231);
-}
-.sign:hover{
-    background-color: rgb(8, 53, 136);
-}
-.leftop{
-    display: flex;
-    flex-direction: column;
-    align-items:start;
-    width: 100%;
-}
-.head a{
-    display: flex;
-    color: rgb(10, 55, 106);
-    font-weight: 500;
-    font-size: medium;
-}
-.para{
-    color: rgb(161, 161, 161);
-    font-size: small;
-}
-.droptext{
-    color: rgb(95, 108, 125);
-    font-size: medium;
-    font-weight: 400;
-    text-align: left;
-    align-items: self-start;
-}
-.droptextmid{
-    color: rgb(95, 108, 125);
-    font-size: medium;
-    font-weight: 400;
-    text-align: left;
-    align-items: self-start;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.midop{
-    display: flex;
-    flex-direction: column;
-    align-items:start;
-    width: 100%;
-}
-.rightop{
-    display:flex;
-    flex-direction: column;
-    align-items: left;
-    width: 100%;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>razorpay</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="left">
+                <a href=""><img class="image" src="./icon.png" alt="razorpay"></a>
+                <div class="text">
+                        <div class="dropdown">
+                            <a class="menus">Payments</a>
+                            <div class="dropbox">
+                                <div class="drocon">
+                                    <div class="leftop">
+                                        <h1 class="droptext">ACCEPT PAYMENTS ONLINE</h1>
+                                        <div class="option">
+                                            <img class="icon" src="https://razorpay.com/build/browser/static/payment-gateway.ae837f84.svg" alt="">
+                                            <div class="optext">
+                                                <div class="head">
+                                                    <a href="#paygates">Payment Gateway</a>
+                                                </div>
+                                                <div class="para">Payments on your Website & App</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img class="icon" src="https://razorpay.com/build/browser/static/payment-links.a69f2346.svg" alt="">
+                                            <div class="optext">
+                                                <div class="head">
+                                                    <a href="#paylinks">Payment Links</a>
+                                                </div>
+                                                <div class="para">Create & send links to collect money</div>
+                                            </div>   
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/payment-pages.eadf7c84.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#paypages">Payment Pages</a></div>
+                                                <div class="para">Get paid with personalized page</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/payment-buttons.74fc1e0f.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#paybutton">Payment Buttons</a></div>
+                                                <div class="para">Create, Copy and Collect in 5 mins</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/qr-code.90a31467.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#qr">QR Codes</a></div>
+                                                <div class="para">Multi-feature QR for your business</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="midop">
+                                    </br>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/instant-settlements.b6b6e467.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head">
+                                                    <a href="#instset">Instant Settlement</a>
+                                                </div>
+                                                <div class="para">Customer payments settled faster</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/invoices.f1e68736.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head">
+                                                    <a href="#invoice">Invoices</a>
+                                                </div>
+                                                <div class="para">Create & send links to collect money</div>
+                                            </div>   
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/smart-collect.8fc3d60e.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#smartcoll">Smart Collect</a></div>
+                                                <div class="para">Automate NEFT, RTGS, IMPS payments</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/subscriptions.c13b66c6.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#subs">Subscriptions</a></div>
+                                                <div class="para">Collect recurring subscription payments</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/globe-international.a2dc7781.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#int">International Payments</a></div>
+                                                <div class="para">Accept payments from across the globe</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rightop">
+                                        <h1 class="droptext">ACCEPT PAYMENTS OFFLINE</h1>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/pos-regular.b683b9f8.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#pos">Razorpay POS</a></div>
+                                                <div class="para">Accept Payments In-Store</div>
+                                            </div>
+                                        </div>
+                                        <h1 class="droptextmid">WITH POWER ADD ONS</h1>
+                                            <div class="option">
+                                                <img src="https://razorpay.com/build/browser/static/razorpay-tokenhq.f13e047f.svg" alt="" class="icon">
+                                                <div class="optext">
+                                                    <div class="head"><a href="#token">Razorpay TokenHQ</a></div>
+                                                    <div class="para">Multi-network card tokenisation</div>
+                                                </div>
+                                            </div>
+                                            <div class="option">
+                                                <img src="https://razorpay.com/build/browser/static/payment-optimizer.b6a02aef.svg" alt="" class="icon">
+                                                <div class="optext">
+                                                    <div class="head"><a href="#optim">Optimizer</a></div>
+                                                    <div class="para">Manage multiple payment gateways</div>
+                                                </div>
+                                            </div>
+                                            <h1 class="droptextmid">PARTNER APPS</h1>
+                                            <div class="option">
+                                                <img src="https://razorpay.com/build/browser/static/app-store.90749963.svg" alt="" class="icon">
+                                                <div class="optext">
+                                                    <div class="head"><a href="#appstore">App Store</a></div>
+                                                    <div class="para">Find right app for your business</div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown">
+                            <a class="menus">Banking+</a>
+                            <div class="dropbox">
+                                <div class="drocon">
+                                    <div class="leftop">
+                                        <div class="droptext">BUSINESS BANKING PLUS</div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/x.b892a7d0.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#payx">RazorpayX</a></div>
+                                                <div class="para">Business banking supercharged for disruptors</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/vendor-payments.0f3e2549.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#soupay">Source To Pay</a></div>
+                                                <div class="para">Integrated procurement to payables solution</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/payouts.1298a79c.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#payouts">Payouts</a></div>
+                                                <div class="para">24x7, Instant & Automated Payouts</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/payout-links.cf242520.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#paylinks">Payout Links</a></div>
+                                                <div class="para">Send money without recipient account details</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/demo-nav-icon.8dadbb49.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#demo">View live demo</a></div>
+                                                <div class="para">See RazorpayX in action, no signup required!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="midop">
+                                        <br>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/current-account.24d6f91e.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="curracc">Current Account</a></div>
+                                                <div class="para">Supercharged for businesses</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/escrow-accounts.de6d866f.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#escrow+">Escrow+ Account</a></div>
+                                                <div class="para">Escrow account for digital-first businesses</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/forex.0b1574d0.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#fdi">Forex/FDI Transfers</a></div>
+                                                <div class="para">Expert-led service to bring foreign currency</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/bank_account.cd3f1807.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#verify">Bank Account Verification</a></div>
+                                                <div class="para">Instantly verify Bank Account, UPI ID or IFSC</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/tax-payments.23ae78cf.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#tax">Tax Payments</a></div>
+                                                <div class="para">Pay your business taxes in under 30 seconds</div>
+                                            </div>
+                                        </div>
+                                        <div class="option">
+                                            <img src="https://razorpay.com/build/browser/static/digital-lending.e4b4e619.svg" alt="" class="icon">
+                                            <div class="optext">
+                                                <div class="head"><a href="#digilend2">Digital Lending 2.0</a></div>
+                                                <div class="para">Fully compliant, 10-second disbursals</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="menus">Payroll</a>
+                        </div>
+                        <div class="dropdown">
+                            <a class="menus">Partners</a>
+                        </div>
+                        <div class="dropdown">
+                            <a class="menus">Resources</a>
+                        </div>
+                        <div class="dropdown">
+                            <a class="menus">Support</a>
+                        </div>
+                        <div class="dropdown">
+                            <a class="menus">Pricing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./flag.png" alt="Indian flag" class="coun">
+                    <a href="login.html" class="login">Log In</a>
+                    <a href="signup.html" class="sign">Sign Up ></a>
+                </div>
+            </div>
+            
+        </div>
+</body>
+</html>
