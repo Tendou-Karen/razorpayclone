@@ -16,11 +16,12 @@ button{
 .navbar{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
-    justify-content: center;
     align-items:center;
+    justify-content: space-between;
     width: 100%;
-    height: 90px;
-    gap:15rem;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgb(242, 244, 248);
 }
 .left{
     display: flex;
@@ -34,7 +35,6 @@ button{
     display: flex;
     margin-right: 5rem;
     align-items: center;
-    gap: 1rem;
 }
 .image{
     height: 40px;
@@ -54,34 +54,70 @@ button{
 .menus{
     color: rgb(95, 108, 125);
     font-size: medium;
-    margin-left: 1rem;
-    margin-right: 1rem;
     font-weight: 500;
     cursor: pointer;
 }
 .dropdown{
-    float: left;
     overflow: hidden;
+    transition: all 200ms cubic-bezier(0.23, 1, 0.320, 1) 50ms;
+    padding: 1rem;
+    justify-content: center;
 }
 .option{
-    display: block;
+    display: flex;
+    gap:1rem;
+    width: 95%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    align-items: center;
+}
+.optext{
     flex-direction: column;
+    align-items: center;
+}
+.icon{
+    border-radius: 50%;
+    background-color: rgb(43, 132, 234);
+    height: 32px;
+    aspect-ratio: 1;
+    border-style: solid;
+    border-color: rgb(216, 237, 255);
+}
+.option:hover{
+    box-shadow: 0px 0px 2px rgb(148, 148, 148);
+    background-color: rgb(226, 240, 253);
+}
+.option:hover .head a{
+    color: rgb(25, 108, 203);
+}
+.option:hover .icon{
+    background-image: linear-gradient(to top right, rgb(185, 218, 255), rgb(43, 132, 234));
 }
 .dropdown:hover .menus{
     color: rgb(43, 132, 234);
 }
-.drocon{
-    border-radius: 10px;
+.dropbox{
+    margin-top: 1rem;
     display: none;
+    border-radius: 1px;
+    box-sizing: border-box;
+    flex-direction: column;
     position: absolute;
-    z-index: 1;
-    background-color: rgb(216, 237, 255);
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    padding-right: 5rem;
+    box-shadow: 0px 0px 2px rgb(148, 148, 148);
 }
 
-.dropdown:hover .drocon {
-    display: block;
-}
+.dropdown:hover .dropbox {
+    display: flex;
 
+}
+.drocon{
+    display: flex;
+    gap: 2rem;
+}
 
 .login{
     color: rgb(19, 100, 241);
@@ -101,6 +137,8 @@ button{
     padding: 0.65rem 1rem;
     font-weight: 600;
     transition: 110ms cubic-bezier(0.23, 1, 0.320, 1);
+    border-style: solid;
+    border-color: rgb(231, 231, 231);
 }
 .sign:hover{
     background-color: rgb(8, 53, 136);
@@ -110,18 +148,6 @@ button{
     flex-direction: column;
     align-items:start;
 }
-.option{
-    width: 95%;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
-.option:hover{
-    box-shadow: 0.5px 0.5px 0px rgb(148, 148, 148);
-    background-color: rgb(226, 240, 253);
-}
-.option:hover .head a{
-    color: rgb(25, 108, 203);
-}
 .head a{
     display: flex;
     color: rgb(10, 55, 106);
@@ -130,4 +156,25 @@ button{
 }
 .para{
     color: rgb(161, 161, 161);
+    font-size: small;
+}
+.titles{
+    display: flex;
+    justify-content: space-between;
+}
+.droptext{
+    color: rgb(95, 108, 125);
+    font-size: medium;
+    font-weight: 300;
+}
+#l{
+    text-align: left;
+}
+#r{
+    text-align: right;
+}
+.midop{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
 }
