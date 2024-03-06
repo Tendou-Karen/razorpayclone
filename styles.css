@@ -26,18 +26,18 @@ button{
 .left{
     display: flex;
     align-items: center;
-    margin-left: 5rem;
+    margin-left: 7rem;
 }
 .text{
     display: flex;
 }
 .right{
     display: flex;
-    margin-right: 5rem;
+    margin-right: 7rem;
     align-items: center;
 }
 .image{
-    height: 40px;
+    height: 35px;
     width: auto;
 }
 .coun{
@@ -105,9 +105,10 @@ button{
     position: absolute;
     z-index: 2;
     background-color: rgb(255, 255, 255);
-    padding: 1rem;
+    padding: 2rem;
     padding-right: 5rem;
     box-shadow: 0px 0px 2px rgb(148, 148, 148);
+    justify-self: self-start;
 }
 
 .dropdown:hover .dropbox {
@@ -158,20 +159,21 @@ button{
     color: rgb(161, 161, 161);
     font-size: small;
 }
-.titles{
-    display: flex;
-    justify-content: space-between;
-}
 .droptext{
     color: rgb(95, 108, 125);
     font-size: medium;
     font-weight: 300;
-}
-#l{
     text-align: left;
+    align-items: self-start;
 }
-#r{
-    text-align: right;
+.droptextmid{
+    color: rgb(95, 108, 125);
+    font-size: medium;
+    font-weight: 300;
+    text-align: left;
+    align-items: self-start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .midop{
     display: flex;
