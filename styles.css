@@ -99,7 +99,7 @@ button{
     color: rgb(43, 132, 234);
 }
 .dropbox{
-    width: 60%;
+    width: auto;
     margin-top: 1rem;
     display: none;
     border-radius: 1px;
