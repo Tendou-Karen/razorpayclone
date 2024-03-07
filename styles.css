@@ -80,7 +80,7 @@ button{
 .icon{
     border-radius: 50%;
     background-color: rgb(43, 132, 234);
-    height: 32px;
+    height: 40px;
     aspect-ratio: 1;
     border-style: solid;
     border-color: rgb(236, 246, 255);
@@ -99,7 +99,7 @@ button{
     color: rgb(43, 132, 234);
 }
 .dropbox{
-    width: auto;
+    width:70%;
     margin-top: 1rem;
     display: none;
     border-radius: 1px;
